@@ -334,17 +334,17 @@ section {
   background: #ffffff; 
   color: #000; 
   position: relative;
-  z-index: 1;
+  z-index: 0;
   padding: 1.5rem 2rem 2rem;
 }
 
 .blue-circule{
   height: 440px;
   width: 440px;
-  border-top-left-radius: 50%;
+  border-top-left-radius: 0;
   border-top-right-radius: 50%;
   border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+  border-bottom-right-radius: 50%;
     background: rgba(64, 123, 255, 0.4);
   position: absolute;
   filter: blur(22px); 
@@ -359,9 +359,7 @@ section {
   background-color: rgba(224, 170, 255, 0.4);
   position: absolute;
   filter: blur(22px); 
-  left: -13em;
-  top: -13em;
-  z-index: -2;
+  z-index: 2;
 }
 .right{
   right: -10em;
@@ -376,7 +374,19 @@ section {
   top: 0;
 
 }
+.top-2{
+  top: -15em
+}
+.right-2{
+  right: -10em;
+}
+.left-2{
+  left: -12em;
+}
 
+.bottam-2{
+bottom: 0;
+}
 .bg-img{
   position: absolute;
 
@@ -399,7 +409,7 @@ section {
 
 .cards .card{
 
-  height: 420px;
+  height: 390px;
   width: 340px;
   max-width: 400px;
   background-color: #fff;
@@ -453,11 +463,23 @@ section {
   background: #ffffff; 
   color: #000; 
   position: relative;
-  z-index: 1;
+  z-index: 0;
   padding: 1.5rem 2rem 2rem;
 }
+
+.Services h3{
+  position: absolute;
+  left: 2vw;
+  top: 20vh;
+}
+
+
 .Services .card{
   border-radius: 12px;
+}
+
+.Services .card:hover{
+  box-shadow: 0 4px 18px #106EEA;
 }
 .Services h3{
   font-size: 26px;
@@ -465,11 +487,15 @@ section {
 }
 .iclass{
 background-color: #DEDEDE;
-color: #fff;
+color: black;
 height: 5vh;
 width: 3vw;
 padding: 5px;
 border-radius: 8px;}
+
+.Services .card:hover .iclass{
+  color: #106EEA;
+}
 
 .Services p{
   padding: 0 1vw;
@@ -478,6 +504,45 @@ border-radius: 8px;}
 .Services .btn{
 border-radius: 58px;
 background-color: #3C3C43;
-width: fit-content;
+vertical-align: middle;
+padding: 7px;
+padding-left: 2.7vw;
+color: white;
+font-weight: 400;
+text-align: center;
+position: relative;
+display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+.Services .card:hover .btn{
+  background-color: #106EEA;
+  cursor: pointer;
+}
+.Services .btn .round{
+     height: 2.1rem;
+    width: 2.1rem;
+    border-radius: 50%;
+    background-color: #FFF;
+    color: #000;
+    left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+.Services .card:hover .btn .round{
+  color: #106EEA;
 }
 
+.Services .btn span{
+  padding-right: 5px;
+}
+.Services .right{
+  right: 5em;
+}
+
+.Services .left{
+  left: -10em;
+}
+ 
