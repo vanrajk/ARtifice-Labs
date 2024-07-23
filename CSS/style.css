@@ -248,6 +248,7 @@ section {
     opacity: 0.1;
 }
  .header h2 {
+    width: fit-content;
     font-size: 40px;
     font-weight: 700;
     transform: translateY(-80px) translateX(70px);
@@ -258,11 +259,10 @@ section {
  .header h2:before {
     content: "";
     position: absolute;
-    width: 70px;
+    width: 65px;
     height: 5px;
     right: 0;
     bottom: 0;
-    transform: translateX(-140px);
     background: var(--second-color);
   }
 
@@ -368,6 +368,9 @@ section {
   left: 0;
 }
 .bottam{
+  bottom: -15em;
+}
+.bottam-2{
   bottom: -15em;
 }
 .top{
@@ -546,3 +549,56 @@ display: flex;
   left: -10em;
 }
  
+.MNV{
+  height: auto;
+  width: 100vw;
+  background: #ffffff; 
+  color: #000; 
+  position: relative;
+  z-index: 0;
+  padding: 1.5rem 2rem 2rem;
+}
+.MNV .flex-center{
+  flex-direction: column;
+}
+.MNV .row {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    text-align: center;
+    padding: 3  0px;
+}
+
+.row img {
+    height: 250px;
+    width: 275px;
+    border-radius: 10px;
+}
+
+.MNV p{
+  display: flex;
+  align-items: center;
+  text-align: start;
+  height: 220px;
+  width: 50em;
+  font-size: 24px;
+  padding: 5px;
+}
+
+.right {
+    order: 1; 
+}
+
+.left {
+    order: 2; 
+}
+.Contact{
+  height: auto;
+  width: 100vw;
+  background: #ffffff; 
+  color: #000; 
+  position: relative;
+  z-index: 0;
+  padding: 1.5rem 2rem 2rem;
+}
+
