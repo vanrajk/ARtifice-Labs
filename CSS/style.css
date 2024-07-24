@@ -352,7 +352,7 @@ section {
   border-top-right-radius: 50%;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 50%;
-    background: rgba(64, 123, 255, 0.4);
+    background: rgba(64, 123, 255, 0.3);
   position: absolute;
   filter: blur(22px); 
 
@@ -363,7 +363,7 @@ section {
   height: 440px;
   width: 440px;
   border-radius: 50%;
-  background-color: rgba(224, 170, 255, 0.4);
+  background-color: rgba(224, 170, 255, 0.3);
   position: absolute;
   filter: blur(22px); 
   z-index: 2;
@@ -394,9 +394,7 @@ section {
   left: -12em;
 }
 
-.bottam-2{
-bottom: 0;
-}
+
 .bg-img{
   position: absolute;
 
