@@ -715,6 +715,7 @@ footer .main{
   flex-direction: row;
   align-items: center;
   margin-left: 40px;
+  cursor: pointer;
 }
 footer .main h3{
   margin-left: 10px;
@@ -733,10 +734,12 @@ footer .center{
   font-weight: 500;
 }
 footer .center p{
-  font-size: 20px;
+  font-size: 16px;
+  letter-spacing: 1.5px;
 }
 footer .center p span{
   font-weight: 700;
+  cursor: pointer;
 }
 
 footer .end{
@@ -752,4 +755,5 @@ footer .end .ficon{
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
