@@ -606,4 +606,150 @@ display: flex;
   z-index: 0;
   padding: 1.5rem 2rem 2rem;
 }
+.flex-start{
+  display: flex;
+  align-items: start;
+  justify-content: start;
+}
+.card-container{
+  position: relative;
+}
+.card-container .card-content{
+  position: absolute;
+  top: 28vh;
+  left: 12vw;
+  color: #fff;
+  z-index: 1;
+}
+.card-container .card-content h3{
+  width: 15em;
+  font-size: 2em;
+}
 
+.card-container .card-content p{
+  font-size: 18px;
+}
+.card-container .card-form{
+  height: 35rem;
+  width: 32vw;
+  margin-left: 43em;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  z-index: 1;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.contact-card{
+  margin: 0 10em;
+  margin-top: 10em;
+  height: 50vh;
+  width: 60vw;
+
+  background-color: #0081FE;
+  clip-path: polygon(85% 30%, 0 0, 0 100%, 100% 100%);
+
+border-radius: 30px;
+position: relative;
+}
+
+.contact-card img{
+  height: 89%;
+  position: absolute;
+  left: 22em;
+  top: -1.5em;
+  opacity: 0.5;
+}
+
+.form-controlle{
+  margin-top: 20px;
+  padding: 40px;
+}
+
+.form-controlle input{
+  font-size: 18px;
+  height: 3.5vh;
+  width: 26.5vw;
+  padding: 10px;
+  font-weight: 600;
+  margin: 8px 0;
+  border-radius: 9px;
+}
+
+.form-controlle textarea{
+  font-size: 18px;
+  width: 26.5vw;
+  padding: 10px;
+  border: 0.001px thin #0A142F;
+  font-weight: 600;
+  margin: 8px 0;
+  border-radius: 9px;
+}
+.form-controlle button{
+  margin-top: 19px;
+  font-size: 18px;
+  font-weight: 300;
+  color: #fff;
+  padding: 12px 38px;
+  background-color: #0081FE;
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
+}
+footer{
+  height: auto;
+  width: 100vw;
+  background: #ffffff; 
+  color: #000; 
+  position: relative;
+  z-index: 0;
+  padding: 1.5rem 0 2rem;
+  display: flex;
+  align-items: center;
+    justify-content: space-evenly;
+
+}
+
+footer .main{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 40px;
+}
+footer .main h3{
+  margin-left: 10px;
+  font-weight: 600;
+  color: #0081FE;
+  font-size: 28px;
+}
+
+footer .main img{
+  height: 50px;
+}
+
+
+footer .center{
+  align-self: center;
+  font-weight: 500;
+}
+footer .center p{
+  font-size: 20px;
+}
+footer .center p span{
+  font-weight: 700;
+}
+
+footer .end{
+  display: flex;
+  column-gap: 15px;
+}
+footer .end .ficon{
+  height: 2.4vh;
+  width: 1.1vw;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

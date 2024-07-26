@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    
     let lastScrollTop = 0;
     const navbar = document.querySelector('header');
 
