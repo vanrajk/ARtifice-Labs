@@ -7,6 +7,7 @@
   --body-bg-color: #fefefe;
   --card-bg-color: #fff;
   --modal-bg-color: #fff;
+  --button-color: #2c7dff;
   --bg-transparent-color: rgba(0, 0, 0, 0.1);
   --transparent-color-01: rgba(0, 0, 0, 0.1);
   --transparent-color-02: rgba(106, 89, 209, 0.1);
@@ -131,20 +132,20 @@ a {
   left: 3rem;
 }
 
-#contactusbtn .round {
-  height: 3.8rem;
-  width: 3.8rem;
+.round {
+  height: 4rem;
+  width: 4rem;
   border-radius: 50%;
   background-color: #fff;
   position: absolute;
   color: #000;
-  right: 5px;
+  right: 6px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#contactusbtn .round .arrow {
+.round .arrow {
   position: absolute;
   left: auto;
   height: 3vh;
@@ -179,7 +180,7 @@ section {
   opacity: 1;
 }
 
-.home span {
+.home h1 {
   font-size: 48px;
   font-weight: 700;
 }
@@ -189,17 +190,58 @@ section {
   color: #2f2ad7;
 }
 
-#GetinTouch {
-  width: fit-content;
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 22px;
-  background-color: #072ac8;
-  color: #fff;
+.animated-button {
+  position: relative;
+  display: inline-block;
+  padding: 16px 16px;
+  width: 8vw; /* Set width using vw */
   border: none;
-  border-radius: 5px;
+  background-color: var(--button-color);
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
   cursor: pointer;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
+
+.animated-button:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  background-color: #fff;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button span {
+  position: relative;
+  z-index: 1;
+}
+
+.animated-button:hover {
+  color: var(--button-color);
+  background-color: #fff;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.animated-button:active {
+  scale: 0.9;
+}
+
+.animated-button:hover:before {
+  transform: translate(-50%, -50%) rotate(45deg);
+  opacity: 1;
+}
+
+/* About-Us section */
+
 .flex-center {
   display: flex;
   justify-content: center;
@@ -214,7 +256,6 @@ section {
   padding: 0rem 2rem 2rem;
   overflow: hidden;
 }
-
 
 .container {
   position: relative;
@@ -238,10 +279,15 @@ section {
 }
 .about-us .bg-img {
   position: absolute;
-
   bottom: 0;
   right: 0;
   z-index: 0;
+  right: 100px;
+}
+
+.bg-img .img {
+  height: 1vh;
+  width: 1vw;
 }
 .about-us .header {
   position: relative;
@@ -324,17 +370,8 @@ section {
   font-size: 19px;
 }
 
-.about-info .description button {
-  font-weight: 200;
-  border-radius: 6px;
-  background-color: #072ac8;
-  color: #fff;
-  width: fit-content;
-  padding: 10px 20px;
-  font-size: 20px;
-  border: 1px solid #fff;
-  cursor: pointer;
-}
+/* our-work section */
+
 .our-work {
   height: auto;
   width: 100vw;
@@ -455,10 +492,19 @@ section {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
+
+.arrow-btn:hover {
+  background: var(--button-color);
+  color: white;
+  transition: 0.5s;
+}
 #rightBtn i {
   width: 50px;
   height: 50px;
 }
+
+/* Services section */
+
 .Services {
   height: auto;
   width: 100vw;
@@ -522,12 +568,12 @@ section {
   cursor: pointer;
 }
 .Services .btn .round {
-  height: 2.1rem;
-  width: 2.1rem;
+  height: 2.2rem;
+  width: 2.2rem;
   border-radius: 50%;
   background-color: #fff;
   color: #000;
-  left: 5px;
+  left: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -591,6 +637,9 @@ section {
 .left {
   order: 2;
 }
+
+/* Contact section */
+
 .Contact {
   height: auto;
   width: 100vw;
@@ -690,6 +739,62 @@ section {
   border: 0;
   cursor: pointer;
 }
+
+.submit {
+  font-family: inherit;
+  font-size: 20px;
+  background: #2c7dff;
+  color: white;
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.submit span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+.submit svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.submit:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+.submit:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+.submit:hover span {
+  transform: translateX(6em);
+}
+
+.submit:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
+}
+
+/* footer section */
 footer {
   height: auto;
   width: 100vw;
