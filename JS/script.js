@@ -15,7 +15,3 @@ document.addEventListener('DOMContentLoaded', () => {
         lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
     });
 });
-
-
-feather.replace();
-
