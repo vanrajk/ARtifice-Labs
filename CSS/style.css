@@ -575,7 +575,8 @@ a {
 }
 
 .Services .card:hover {
-  box-shadow: 0 4px 18px #106eea;
+  box-shadow: 0 2px 15px rgba(16, 110, 234, 0.6);
+  border: 2px solid rgba(16, 110, 234, 0.40);
 }
 .Services h3 {
   font-size: 26px;
@@ -602,8 +603,8 @@ a {
   border-radius: 58px;
   background-color: #3c3c43;
   vertical-align: middle;
-  padding: 7px;
-  padding-left: 2.7vw;
+  padding: 8px;
+  padding-left: 2.4vw;
   color: white;
   font-weight: 400;
   text-align: center;
@@ -617,12 +618,12 @@ a {
   cursor: pointer;
 }
 .Services .btn .round {
-  height: 2.2rem;
-  width: 2.2rem;
+  height: 2rem;
+  width: 2rem;
   border-radius: 50%;
   background-color: #fff;
   color: #000;
-  left: 3px;
+  left: 4px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -633,7 +634,7 @@ a {
 }
 
 .Services .btn span {
-  padding-right: 5px;
+  padding-right: 10px;
 }
 .Services .right {
   right: 5em;
