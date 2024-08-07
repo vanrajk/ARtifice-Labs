@@ -4,7 +4,7 @@
   --second-color: #6a59d1;
   --third-color: #777;
   --hover-color: #614fd0;
-  --body-bg-color: #fefefe;
+  --body-bg-color: #f6f9fe;
   --card-bg-color: #fff;
   --modal-bg-color: #fff;
   --button-color: #2c7dff;
@@ -32,7 +32,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-style: normal;
-  background-color: #f6f9fe;
+  background-color: var(--body-bg-color);
   position: relative;
   height: auto;
   overflow-x: hidden;
@@ -89,7 +89,7 @@ nav {
   border-radius: 80px;
   -webkit-backdrop-filter: blur(19px);
   backdrop-filter: blur(19px);
-  border: 1px solid #bbbbba;
+  border: 1px solid rgb(187, 187, 186, 0.6);
   cursor: pointer;
 }
 nav li {
@@ -167,6 +167,14 @@ nav .toggle-btn {
   display: none;
 }
 
+.bi {
+  font-size: 2.083vw;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
 /* ***************** home ******************** */
 
 .home {
@@ -184,7 +192,11 @@ nav .toggle-btn {
   justify-content: center;
   align-items: center;
 }
-
+.home-HP {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 .home h1 {
   font-size: 48px;
   font-weight: 700;
@@ -304,6 +316,7 @@ nav .toggle-btn {
 
 .about-img img {
   max-width: 600px;
+  z-index: 1;
 }
 
 .about-info {
@@ -341,7 +354,6 @@ nav .toggle-btn {
 
 .aboutbg-img {
   position: absolute;
-  z-index: -1;
   bottom: 0;
   right: 0;
 }
@@ -363,7 +375,6 @@ nav .toggle-btn {
   background: rgba(64, 123, 255, 0.3);
   position: absolute;
   filter: blur(22px);
-
   z-index: -2;
 }
 
@@ -403,9 +414,9 @@ nav .toggle-btn {
 
 .workbg-img {
   position: absolute;
-
   bottom: 0;
-  z-index: 0;
+  z-index: -1;
+  margin-right: 60rem;
 }
 
 .cards {
@@ -488,7 +499,6 @@ nav .toggle-btn {
 /* Services section */
 
 .Services {
-  background: #ffffff;
   position: relative;
   padding: 0;
 }
@@ -582,8 +592,99 @@ nav .toggle-btn {
   right: 0;
 }
 
+button {
+  position: absolute;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+  /* margin-top: 100px;
+  margin-left: 900px;  */
+ }
+ 
+ button.learn-more {
+  width: 12rem;
+  height: auto;
+ }
+ 
+ button.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #282936;
+  border-radius: 1.625rem;
+ }
+ 
+ button.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+ }
+ 
+ button.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+ }
+ 
+ button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.29rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+ }
+ 
+ button.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #282936;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+ }
+ 
+ button:hover .circle {
+  width: 100%;
+ }
+ 
+ button:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+ }
+ 
+ button:hover .button-text {
+  color: #fff;
+ }
+
+/* Mission & Vision */
+
 .MNV {
-  background: #ffffff;
   color: #000;
   position: relative;
   z-index: 0;
@@ -631,11 +732,14 @@ nav .toggle-btn {
 /* Contact section */
 
 .Contact {
-  background: #ffffff;
   color: #000;
   position: relative;
   z-index: 0;
   padding-bottom: 100px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 .flex-start {
   display: flex;

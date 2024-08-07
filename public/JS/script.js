@@ -55,3 +55,34 @@ function toggleSidebar() {
       sidebar.style.width = "95vw";
   }
 }
+
+
+
+// Scroll reveal animations
+ScrollReveal({
+  // reset: true,
+  distance: '60px',
+  duration: 2500,
+  delay: 100
+});
+
+
+// Top
+
+ScrollReveal().reveal('.nav-bar , .header , .card-form', { delay: 200, origin: 'top',});
+ScrollReveal().reveal('.main ,.center , .end', { delay: 500, origin: 'top', interval: 200 });
+
+
+// Right 
+
+ScrollReveal().reveal('.about-info', { delay: 600, origin: 'right' });
+ScrollReveal().reveal('.servicesbg-img ,.aboutbg-img', { delay: 500, origin: 'right', interval: 200 });
+
+// Bottom 
+ScrollReveal().reveal('.about-img', { delay: 500, origin: 'bottom' });
+ScrollReveal().reveal('.content', { delay: 500, origin: 'bottom', interval: 200 });
+
+// Left
+
+ScrollReveal().reveal('.home-HP , .slogan , .contact-card , .card-content', { delay: 500, origin: 'left' });
+ScrollReveal().reveal('.workbg-img', { delay: 500, origin: 'left', interval: 200 });
