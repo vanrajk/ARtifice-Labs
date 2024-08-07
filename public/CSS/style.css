@@ -936,6 +936,10 @@ footer .end {
   display: flex;
 }
 
+footer .end h3{
+  visibility: hidden;
+}
+
 .wrapper {
   display: inline-flex;
   list-style: none;
