@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 :root {
   --first-color: #0e2431;
-  --second-color: #6a59d1;
+  --second-color: #2c7dff;
   --third-color: #777;
   --hover-color: #614fd0;
   --body-bg-color: #f6f9fe;
@@ -214,7 +214,7 @@ nav .toggle-btn {
 .animated-button {
   position: relative;
   display: inline-block;
-  padding: 16px 16px;
+  padding: 0.833vw 0.833vw;
   width: 10vw; /* Set width using vw */
   border: none;
   background-color: var(--button-color);
@@ -272,7 +272,7 @@ nav .toggle-btn {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  margin: 4rem 8rem;
 }
 
 .header {
@@ -311,11 +311,12 @@ nav .toggle-btn {
 .content {
   display: flex;
   flex-direction: row;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .about-img img {
-  max-width: 600px;
+  max-width: 100%;
+  min-width: 500px;
   z-index: 1;
 }
 
@@ -324,7 +325,7 @@ nav .toggle-btn {
 }
 
 .about-info .description h3 {
-  margin-bottom: 0;
+  margin-top: 1px;
   font-size: 2.5em;
   font-weight: 600;
 }
@@ -345,7 +346,7 @@ nav .toggle-btn {
 
 .description p {
   color: var(--first-color);
-  font-size: 19px;
+  font-size: 16px;
 }
 
 .description .animated-button {
@@ -355,7 +356,14 @@ nav .toggle-btn {
 .aboutbg-img {
   position: absolute;
   bottom: 0;
-  right: 0;
+  top: 420px;
+  right: 200px;
+  z-index: -1;
+  /* margin-bottom: 80px; */
+}
+
+.about-btn {
+  margin-top: 40px;
 }
 
 /* **************** Our Work **************** */
@@ -414,7 +422,7 @@ nav .toggle-btn {
 
 .workbg-img {
   position: absolute;
-  bottom: 0;
+  bottom: 60px;
   z-index: -1;
   margin-right: 60rem;
 }
@@ -422,21 +430,24 @@ nav .toggle-btn {
 .cards {
   height: 390px;
   width: 100vw;
+  gap: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
   margin-bottom: 20%;
   flex: 1;
+  /* flex-wrap: wrap; */
 }
 
 .cards .card {
-  height: 390px;
+  /* display: flex; */
+  height: 410px;
   width: 340px;
   background-color: #fff;
   border-radius: 12px;
   z-index: 1;
-  margin: 0 50px;
+  /* margin: 0 50px; */
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -459,13 +470,14 @@ nav .toggle-btn {
 }
 
 .cards .card h3 {
-  padding-left: 14px;
+  padding-left: 16px;
 }
 
 .cards .card p {
-  padding-left: 14px;
-  text-align: left;
-  margin-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .arrow-btn {
@@ -496,6 +508,102 @@ nav .toggle-btn {
   height: 50px;
 }
 
+button {
+  position: absolute;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+button.learn-more {
+  width: 15rem;
+  height: auto;
+  margin-top: 18.229vw;
+  margin-left: 900px;
+}
+
+button.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #282936;
+  border-radius: 1.625rem;
+}
+
+button.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+
+button.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+
+button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.29rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+
+button.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #282936;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+button:hover .circle {
+  width: 100%;
+}
+
+button:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+}
+
+button:hover .button-text {
+  color: #fff;
+}
+
+/* @media (max-width: 1690px) {
+  button.learn-more{
+    margin-top: 100px;
+  }
+} */
+
 /* Services section */
 
 .Services {
@@ -509,21 +617,21 @@ nav .toggle-btn {
 
 .Services h3 {
   position: absolute;
-  left: 2vw;
   top: 20vh;
+  left: 300px;
+  font-size: 26px;
+  align-self: flex-start;
 }
 
 .Services .card {
   border-radius: 12px;
+  margin-top: 100px;
 }
 
 .Services .card:hover {
-  box-shadow: 0 4px 18px #106eea;
+  box-shadow: 0 4px 18px rgba(16, 110, 234, 0.6);
 }
-.Services h3 {
-  font-size: 26px;
-  align-self: flex-start;
-}
+
 .iclass {
   background-color: #dedede;
   color: black;
@@ -579,7 +687,7 @@ nav .toggle-btn {
   padding-right: 5px;
 }
 .Services .right {
-  right: 5em;
+  right: 8em;
 }
 
 .Services .left {
@@ -588,99 +696,10 @@ nav .toggle-btn {
 
 .servicesbg-img {
   position: absolute;
-  bottom: 0;
+  bottom: 100px;
+  z-index: -1;
   right: 0;
 }
-
-button {
-  position: absolute;
-  display: inline-block;
-  cursor: pointer;
-  outline: none;
-  border: 0;
-  vertical-align: middle;
-  text-decoration: none;
-  background: transparent;
-  padding: 0;
-  font-size: inherit;
-  font-family: inherit;
-  /* margin-top: 100px;
-  margin-left: 900px;  */
- }
- 
- button.learn-more {
-  width: 12rem;
-  height: auto;
- }
- 
- button.learn-more .circle {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  position: relative;
-  display: block;
-  margin: 0;
-  width: 3rem;
-  height: 3rem;
-  background: #282936;
-  border-radius: 1.625rem;
- }
- 
- button.learn-more .circle .icon {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  background: #fff;
- }
- 
- button.learn-more .circle .icon.arrow {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  left: 0.625rem;
-  width: 1.125rem;
-  height: 0.125rem;
-  background: none;
- }
- 
- button.learn-more .circle .icon.arrow::before {
-  position: absolute;
-  content: "";
-  top: -0.29rem;
-  right: 0.0625rem;
-  width: 0.625rem;
-  height: 0.625rem;
-  border-top: 0.125rem solid #fff;
-  border-right: 0.125rem solid #fff;
-  transform: rotate(45deg);
- }
- 
- button.learn-more .button-text {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 0.75rem 0;
-  margin: 0 0 0 1.85rem;
-  color: #282936;
-  font-weight: 700;
-  line-height: 1.6;
-  text-align: center;
-  text-transform: uppercase;
- }
- 
- button:hover .circle {
-  width: 100%;
- }
- 
- button:hover .circle .icon.arrow {
-  background: #fff;
-  transform: translate(1rem, 0);
- }
- 
- button:hover .button-text {
-  color: #fff;
- }
 
 /* Mission & Vision */
 
@@ -709,7 +728,7 @@ button {
 
 .row img {
   height: 350px;
-  width: 375px;
+  width: 450px;
   border-radius: 10px;
 }
 
@@ -888,6 +907,11 @@ button {
 }
 
 /* footer section */
+
+ul{
+  list-style: none;
+}
+
 footer {
   height: auto;
   width: 100vw;
@@ -934,6 +958,12 @@ footer .center p span {
 
 footer .end {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer .end h3 {
+  flex-direction: row;
 }
 
 footer .end h3{
@@ -945,7 +975,6 @@ footer .end h3{
   list-style: none;
   height: 120px;
   width: 100%;
-  padding-top: 40px;
   font-family: "Poppins", sans-serif;
   justify-content: center;
 }
@@ -1013,12 +1042,6 @@ footer .end h3{
   color: #fff;
 }
 
-.wrapper .twitter:hover,
-.wrapper .twitter:hover .tooltip,
-.wrapper .twitter:hover .tooltip::before {
-  background: #1da1f2;
-  color: #fff;
-}
 
 .wrapper .instagram:hover,
 .wrapper .instagram:hover .tooltip,
@@ -1027,14 +1050,42 @@ footer .end h3{
   color: #fff;
 }
 
-.wrapper .X:hover,
-.wrapper .X:hover .tooltip,
-.wrapper .X:hover .tooltip::before {
-  background: #000;
-  color: #fff;
+
+@media screen and (max-width: 1360px) {
+  .animated-button {
+    /* padding: 14px 14px; */
+    width: 14vw;
+  }
+
+  .about-info .description h3 {
+    margin-top: 1px;
+    font-size: 2em;
+    font-weight: 600;
+  }
+
+  .description h4 {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 1px;
+  }
+
+  .description p {
+    color: var(--first-color);
+    font-size: 14px;
+  }
+
+  .aboutbg-img {
+    top: 450px;
+  }
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
-@media (max-width: 990px) {
+@media screen and (max-width: 1090px) {
   nav .nav-item,
   nav .round,
   nav #contactusbtn {
@@ -1053,11 +1104,58 @@ footer .end h3{
   }
 
   .home h1 {
+    font-size: 42px;
+    text-align: center;
+  }
+
+  .animated-button {
+    /* padding: 10px 10px; */
+    width: 14vw;
+    font-size: 14px;
+  }
+
+  .about-img img {
+    min-width: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .about-info {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1010px) {
+  .about-info .description h3 {
+    margin-top: 1px;
+    font-size: 1.6em;
+    font-weight: 600;
+  }
+  .description h4 {
+    font-size: 1em;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 1px;
+  }
+  .description p {
+    color: var(--first-color);
+    font-size: 10px;
+  }
+
+  .aboutbg-img {
+    display: none;
+  }
+}
+
+@media (max-width: 750px) {
+  .home h1 {
     font-size: 40px;
   }
 
   .animated-button {
-    width: 15vw;
+    width: 16vw;
+    font-size: 10px;
   }
 
   .content {
@@ -1069,6 +1167,8 @@ footer .end h3{
 
   .about-img img {
     max-width: 100%;
+    height: 300px;
+    z-index: 1;
   }
 
   .cards {
@@ -1077,9 +1177,11 @@ footer .end h3{
     gap: 20px;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
   }
 
   .Services h3 {
+    margin-left: 5rem;
     font-size: 30px;
     margin-top: 80px;
   }
@@ -1107,6 +1209,9 @@ footer .end h3{
     left: 520px;
   }
 
+  .workbg-img {
+    margin-right: 20rem;
+  }
   .btn {
     width: 120px;
   }
@@ -1206,6 +1311,10 @@ footer .end h3{
     width: 90%;
     margin-bottom: 0;
   }
+
+  .servicesbg-img {
+    z-index: -1;
+  }
 }
 
 @media (max-width: 430px) {
@@ -1239,6 +1348,17 @@ footer .end h3{
     left: 8%;
   }
 
+  .header h1 {
+    -webkit-background-clip: text;
+    font-size: 54px;
+    text-align: center;
+  }
+
+  .header h2 {
+    width: fit-content;
+    font-size: 34px;
+    text-align: center;
+  }
   .home {
     padding: 1px;
     background: url("../Images/Background-vertical.jpg") no-repeat center;
@@ -1259,9 +1379,17 @@ footer .end h3{
   }
 
   .animated-button {
-    width: 40vw;
+    width: 30vw;
+    height: 3.5vh;
   }
 
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 4rem;
+  }
   .content {
     display: flex;
     flex-direction: column;
@@ -1272,19 +1400,19 @@ footer .end h3{
   }
 
   .about-info .description h3 {
-    font-size: 32px;
+    font-size: 30px;
     font-weight: 600;
     margin: 0;
     padding: 0;
   }
 
   .description h4 {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 600;
   }
 
   .description p {
-    font-size: 16px;
+    font-size: 10px;
   }
 
   .aboutbg-img {
@@ -1307,6 +1435,7 @@ footer .end h3{
     gap: 20px;
     justify-content: center;
     align-items: center;
+    flex-wrap: nowrap;
   }
 
   .cards .card {
@@ -1325,6 +1454,13 @@ footer .end h3{
 
   .workbg-img img {
     max-width: 100%;
+  }
+
+  .workbg-img {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    margin-right: 60rem;
   }
 
   .Services h3 {
